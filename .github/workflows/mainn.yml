@@ -1,0 +1,13 @@
+- for:
+    num: !<range>
+      start: 1
+      stop: 101
+  do:
+    - if:
+        condition: !<equals>
+          - !<mod>
+            - num
+            - 2
+          - 0
+      then:
+        - print: !<str> num
